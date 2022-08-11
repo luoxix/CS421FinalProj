@@ -17,6 +17,7 @@ type Edge = (Char, Char)
 edges :: Graph -> [Edge]
 edges g = [(v,w) | v <- vertices g, w <- g!v]
 
+------ methods to manipulate graph / retrieve graph info
 mapT :: (Char -> a -> b) -> Table a -> Table b
 mapT f t = array (bounds t) [(v, f v (t!v)) | v <- indices t]
 
